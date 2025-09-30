@@ -1,25 +1,75 @@
 ---
-title: "manuscript"
+title: "R you serious?"
+subtitle: "Draft 1"
+author: "Torkil Rogneflåten"
+editor_options:
+  chunk_output_type: console
+bibliography: resources/references.bib
+csl: resources/apa.csl
 format: pdf
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+#| include: false
+
+
+library(tidyverse)
+library(readxl)
+
 ```
 
-You can add options to executable code like this 
+
+# R you kidding me?
+
+This is a text. It explains something important. Combining `code` and text with Quarto is ...
+
+R you sure that R is best? Read @wickham2017r book on R and data science to find out for yourself.
+
+
+## Showing of R code and output
+
+In the `sim-rawdata.R` file I made a dataset with the following code:
+
+```{r}
+#| echo: true
+
+# simulating a dataset
+rawdata <- data.frame(y = rnorm(100, mean = 5, sd = 2),
+                      z = rnorm(100, mean = 10, sd = 3))
+```
+
+This is a snippet of what the dataset looks like:
 
 ```{r}
 #| echo: false
-2 * 2
+
+data <- read_excel("data/raw-data/rawdata.xlsx")
+
+head(data)
+
+
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+\newpage
+
+This is a "detailed" plot of the data with all t-test info of statistical differences between y and z.
+
+```{r}
+#| fig-cap: "**Figure 1**. This is a figure. Grey points indicates individual values. Red crossline indicates the group average value."
+#| fig-subcap: ""
+#| fig-cap-location: bottom
+#| fig-width: 5.5
+#| fig-height: 4.5
+#| fig-dpi: 600
+#| fig-align: "center"
+#| echo: false
+
+figure1 <- readRDS("./figures/figure1.RDS")
+
+figure1
+```
+
+
+
+# References {.unnumbered}
+
