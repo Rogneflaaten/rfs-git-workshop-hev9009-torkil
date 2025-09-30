@@ -4,4 +4,4 @@ This repository contains data, code and additional files needed to reproduce the
 
 ## Repository strucure
 
-Scripts are stored in the `./R` folder. `./data` contains both raw-data, stored in `/data/derivedData`, and processed data (model outputs, summaries etc.) stored in `/data/derivedData`. `./resources` contains files used to produce outputs from R quarto files. All code creating figure 1 are located in the `./figures` folder.
+Scripts are stored in the `./R` folder. `./data/raw-data` contains both raw-data, stored in `/data/derived-data`, and processed data (model outputs, summaries etc.) stored in `/data/derivedData`. `./resources` contains files used to produce outputs from R quarto files. All code creating figure 1 are located in the `./figures` folder.
