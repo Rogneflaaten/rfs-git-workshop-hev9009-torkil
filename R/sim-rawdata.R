@@ -5,8 +5,7 @@
 set.seed(1)
 
 # simulating a dataset
-rawdata <- data.frame(x = c("group1", "group2"),
-                      y = rnorm(100, mean = 5, sd = 2),
+rawdata <- data.frame(y = rnorm(100, mean = 5, sd = 2),
                       z = rnorm(100, mean = 10, sd = 3))
 
 
