@@ -1,12 +1,18 @@
 ---
-title: "R you serious?"
-subtitle: "Draft 1"
+title: " Scientific Communication, Collaboration and Design in Quantitative Research Using R"
+subtitle: "R you serious, is R easy?"
+logo: resources/logo-eng.png
 author: "Torkil Rogneflåten"
+affiliation: "Inland Norway University of Applied Sciences, Lillehammer, Norway"
 editor_options:
   chunk_output_type: console
 bibliography: resources/references.bib
 csl: resources/apa.csl
-format: pdf
+format: 
+  pdf:
+    documentclass: scrreprt
+    template-partials: 
+      - before-body.tex
 ---
 
 ```{r}

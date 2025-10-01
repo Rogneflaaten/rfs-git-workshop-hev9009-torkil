@@ -1,0 +1,28 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\cleardoublepage
+\thispagestyle{empty}
+{\centering
+\hbox{}\vskip 0cm plus 1fill
+$if(logo)$
+{\centering\includegraphics[width=10cm]{$logo$}\par}
+\vspace{3cm}
+$endif$
+{\Huge\bfseries $title$ \par}
+$if(subtitle)$
+\vspace{3ex}
+{\huge\bfseries $subtitle$ \par}
+$endif$
+$if(author)$
+\vspace{3ex}
+{\Large\itshape $author$ \par}
+$endif$
+$if(affiliation)$
+\vspace{3ex}
+{\small $affiliation$ \par}
+$endif$
+\vskip 0cm plus 2fill
+}
+$endif$
