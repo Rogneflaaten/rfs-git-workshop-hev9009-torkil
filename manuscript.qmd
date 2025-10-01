@@ -13,6 +13,11 @@ format:
     documentclass: scrreprt
     template-partials: 
       - before-body.tex
+    number-sections: true
+    linestretch: 1.5
+    mainfont: "Times New Roman"
+    fontsize: 12p
+
 ---
 
 ```{r}
@@ -56,7 +61,6 @@ head(data)
 
 ```
 
-\newpage
 
 This is a "detailed" plot of the data with all t-test info of statistical differences between y and z.
 
@@ -114,7 +118,10 @@ This paragraph utilizes the stored text objects above. z's average score of `r z
 
 ## Basic quarto text syntax
 
-*Italic*, **Bold**, ***ItalicBold***, \textcolor{red}{red}, \textcolor{yellow}{yellow}, \textcolor{blue}{blue}, ^superscript^, ~subscript~ ...
+*Italic*, **Bold**, ***ItalicBold***, ~~Strikethrough~~, `inline code`, ^superscript^, ~subscript~. 
+You can combine formats like ***bold and italic*** or **bold with `code`** or *italic with ^superscript^*.
+You can make colored text:\textcolor{red}{red}, \textcolor{yellow}{yellow}, \textcolor{blue}{blue}, \textcolor{green}{green}, \textcolor{purple}{purple}, \textcolor{orange}{orange}.
+
 
 \newpage
 
