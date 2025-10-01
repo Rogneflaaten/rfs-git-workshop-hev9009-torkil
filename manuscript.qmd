@@ -65,7 +65,7 @@ head(data)
 This is a "detailed" plot of the data with all t-test info of statistical differences between y and z.
 
 ```{r}
-#| fig-cap: "**Figure 1**. R you sure about this figure? -no. Grey points indicates individual values. Red crossline indicates the group average value."
+#| fig-cap: "**Figure 1**. R you sure about this figure? -no. Green points indicates individual values. Green crossline indicates the group average value."
 #| fig-subcap: ""
 #| fig-cap-location: bottom
 #| fig-width: 5.5
