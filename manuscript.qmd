@@ -69,7 +69,48 @@ figure1 <- readRDS("./figures/figure1.RDS")
 figure1
 ```
 
+\newpage
 
+The code chunk below stores statistical results and data summaries R objects, which is usefull for writing results in quarto text. 
+
+```{r}
+#| echo: true
+#| eval: true
+
+# import the statistics
+stats <- readRDS("data/derived-data/stats.RDS")
+
+# store t test results in text form
+test_results <- paste0(round(diff(stats$estimate), 2), 
+                       " (p = ", format.pval(stats$p.value, digits = 3),
+                       ")")
+
+
+
+# import summarized data
+sum.data <- readRDS("data/derived-data/sum.data.RDS")
+
+# store mean and sd for variable y in text form
+y_sum <- paste0(sprintf("%.1f", sum.data[1, 1]),
+                  " \u00b1 ",
+                  sprintf("%.1f", sum.data[1, 2]))
+
+# store mean and sd for variable z in text form
+z_sum <- paste0(sprintf("%.1f", sum.data[1, 3]),
+                  " \u00b1 ",
+                  sprintf("%.1f", sum.data[1, 4]))
+
+```
+
+
+This paragraph utilizes the stored text objects above. z's average score of `r z_sum` was `r test_results` higher than y's average score of `r y_sum`. 
+
+
+## Basic quarto text syntax
+
+*Italic*, **Bold**, ***ItalicBold***, \textcolor{red}{red}, \textcolor{yellow}{yellow}, \textcolor{blue}{blue}, ^superscript^, ~subscript~ ...
+
+\newpage
 
 # References {.unnumbered}
 
